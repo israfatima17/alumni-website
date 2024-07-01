@@ -1,0 +1,116 @@
+.main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  width: 100%;
+  justify-items: center;
+}
+
+.alumni-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.alumni-photo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.alumni-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.prev-btn, .next-btn {
+  background-color: lightgray;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.alumni-details {
+  flex-grow: 1;
+  max-width: 500px;
+}
+
+.alumni-data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.alumni-data {
+  text-align: center;
+}
+
+.delete-btn {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .alumni-sidebar {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .prev-btn, .next-btn {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .alumni-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .alumni-details {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    grid-template-columns: 1fr 2fr; /* Adjust the column widths as needed */
+  }
+}

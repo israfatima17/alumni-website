@@ -1,28 +1,29 @@
-import { initializeApp } from 'firebase/app';
-import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
+import { auth } from './config/firebaseConfig'; // Ensure correct path to firebaseConfig
 
-const firebaseConfig = {
-  // Your Firebase config
-};
+// Initialize Firebase app (if needed, though it seems you've already initialized it elsewhere)
+// const app = initializeApp(firebaseConfig);
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-
-export const loginWithEmailAndPassword = async (email, password) => {
+const signInWithGoogle = async () => {
   try {
-    const userCredential = await signInWithEmailAndPassword(auth, email, password);
-    return userCredential.user;
+    const provider = new GoogleAuthProvider();
+    const userCredential = await signInWithPopup(auth, provider);
+    const user = userCredential.user;
+    // Use the user object (e.g., email, name) for your app's logic
+    return user;
   } catch (error) {
+    console.error('Error signing in with Google:', error);
     throw error;
   }
 };
 
-export const logout = async () => {
+const handleSignOut = async () => {
   try {
     await signOut(auth);
+    console.log('User signed out successfully');
   } catch (error) {
-    throw error;
+    console.error('Error signing out:', error);
   }
 };
 
-export default auth;
+export { signInWithGoogle, handleSignOut };

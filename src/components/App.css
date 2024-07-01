@@ -1,0 +1,56 @@
+.top-bar {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+  }
+  
+  .top-bar-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .top-bar-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .top-bar-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .navbar {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+  }
+  
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-brand img.logo {
+    height: 50px;
+  }
+  
+  .navbar-links ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-links ul li {
+    display: inline;
+  }
+  
+  .navbar-links ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .navbar-links ul li a:hover {
+    text-decoration: underline;
+  }
+  

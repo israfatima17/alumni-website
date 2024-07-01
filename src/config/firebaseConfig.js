@@ -1,9 +1,12 @@
-//import { initializeApp } from 'firebase/app';
-import firebase from 'firebase/compat/app';
+// src/config/firebaseConfig.js
+
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: "AIzaSyD6dMPVhvR9VZwwwvYon27FRMot7gor1KM",
-  authDomain: "alumni-university.firebaseapp.com",
+  authDomain: "alumni-university.web.app",
   projectId: "alumni-university",
   storageBucket: "alumni-university.appspot.com",
   messagingSenderId: "44212785965",
@@ -11,8 +14,8 @@ const firebaseConfig = {
   measurementId: "G-GX7LP47PF4"
 };
 
-// Initialize Firebase
-//const app = initializeApp(firebaseConfig);
-const app = firebase.initializeApp(firebaseConfig)
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
 
-export default firebaseConfig;
+export {firebaseConfig, auth, db };

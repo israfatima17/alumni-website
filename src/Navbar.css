@@ -1,0 +1,54 @@
+/* Navbar.css */
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between; /* Align the content to the right */
+    align-items: center; /* Center vertically */
+    background-color: lightgray; /* Light gray background color */
+    padding: 10px; /* Add some padding */
+  }
+  
+  .registration-find-friends {
+    display: flex;
+  }
+  
+  .registration-find-friends .nav-link {
+    color: #333; /* Unique color for the links */
+    text-decoration: none; /* Remove underline */
+    margin-right: 10px; /* Add some margin between links */
+  }
+  
+  .navbar {
+    background-color: #f8f9fa; /* Change the background color of the navbar */
+    padding: 10px 0; /* Add padding to the navbar */
+  }
+  
+  .container {
+    max-width: 1200px; /* Set maximum width for the container */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  .navbar-brand {
+    margin-right: 20px; /* Add margin to the right of the brand */
+  }
+  
+  .navbar-links ul {
+    list-style: none; /* Remove bullet points from the list */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .navbar-links ul li {
+    display: inline-block; /* Display list items horizontally */
+  }
+  
+  .navbar-links ul li .nav-link {
+    color: #333; /* Link color */
+    text-decoration: none; /* Remove underline */
+    margin-right: 20px; /* Add margin between links */
+  }
+  
+  .logo {
+    max-width: 100px; /* Set maximum width for the logo */
+  }
+  

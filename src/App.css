@@ -1,41 +1,110 @@
-/* App.css */
-.App {
-  text-align: center;
-  background-color: #f0f0f0; /* Custom background color */
-}
-
-.navbar {
-  background-color: #333; /* Navbar background color */
-  color: #fff;
-  padding: 1rem 0;
-}
-
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar .navbar-brand {
-  display: flex;
-  align-items: center;
-  color: #fff;
-  text-decoration: none;
-}
-
-.navbar .navbar-links ul {
-  list-style-type: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
   padding: 0;
 }
 
-.navbar .navbar-links ul li {
-  display: inline;
-  margin-right: 1rem;
+body {
+  font-family: Arial, sans-serif;
 }
 
-.navbar .navbar-links ul li a {
-  color: #fff;
+.App {
+  text-align: center;
+}
+
+.top-bar {
+  background-color: #f8f9fa;
+  padding: 10px 0;
+}
+
+.top-bar-links {
+  display: flex;
+  justify-content: center;
+}
+
+.top-bar-link {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.top-bar-link:hover {
+  text-decoration: underline;
+}
+
+.navbar {
+  background-color: #343a40;
+  padding: 10px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
   text-decoration: none;
 }
 
-/* Additional styling for other components */
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.navbar-links ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar-links li {
+  margin: 0 15px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+  .navbar-links ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-links li {
+    margin: 10px 0;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .top-bar-links {
+    flex-direction: column;
+  }
+
+  .top-bar-link {
+    margin: 10px 0;
+  }
+}

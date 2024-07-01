@@ -1,15 +1,25 @@
 import React, { useState } from 'react';
-import { loginWithEmailAndPassword } from '../services/authService';
+import { useNavigate } from 'react-router-dom';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
-const Login = () => {
+const AdminLogin = ({ setIsAdmin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate();
+  const auth = getAuth();
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      await loginWithEmailAndPassword(email, password);
+      await signInWithEmailAndPassword(auth, email, password);
+      if (email === 'admin@gmail.com' && password === 'saus12345') {
+        setIsAdmin(true);
+        navigate('/admin');
+      } else {
+        setError('Only the designated admin can access this panel.');
+        await auth.signOut();
+      }
     } catch (error) {
       setError(error.message);
     }
@@ -17,7 +27,7 @@ const Login = () => {
 
   return (
     <div>
-      <h2>Login</h2>
+      <h2>Admin Login</h2>
       <form onSubmit={handleLogin}>
         <div>
           <label>Email:</label>
@@ -34,4 +44,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default AdminLogin;

@@ -1,0 +1,13 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database} {
+    match /documents {
+      match /registrations {
+        allow read: if request.auth.uid != null; // Allow anyone to read
+        allow write: false; // Prevent unauthorized writes
+      }
+      // Allow other collections with specific rules if needed
+    }
+  }
+}

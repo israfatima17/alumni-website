@@ -1,0 +1,84 @@
+/* RegistrationPage.css */
+
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #61bf82, #a5c55a); /* Gradient background color */
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+h2 {
+  color: #fff; /* White heading */
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 20px;
+  background-color: #fff; /* White form background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333; /* Dark grey label text */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 1px solid #ccc; /* Light grey border bottom */
+  background-color: transparent;
+  font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border-bottom: 1px solid #2196F3; /* Blue border bottom on focus */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.register-button {
+  padding: 12px 20px;
+  background-color: #2196F3; /* Blue button background */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #1976D2; /* Darker blue on hover */
+}
+
+.error {
+  color: #f44336; /* Red error message */
+  margin-bottom: 10px;
+}
+
+.success {
+  color: #4CAF50; /* Green success message */
+  margin-bottom: 10px;
+}
